@@ -5,8 +5,9 @@ feature 'server' do
     expect(page).to have_content "Simple Server"
   end
 
-  scenario 'has route set' do
-    visit('/set')
-    expect(page).to have_content "Set route exists"
+  scenario 'route set passes query string params to app' do
+    visit('/set?somekey=a&somevalue=1')
+    expect(page).to have_content "Set a = 1"
+
   end
 end
