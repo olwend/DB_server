@@ -13,7 +13,7 @@ class App < Sinatra::Base
   end
 
   get '/set' do
-    "Set " + params[:somekey] + " =" + params[:somevalue]
+    #"Set " + params[:somekey] + " =" + params[:somevalue]
     #put value - key logic here
     erb :index
   end
