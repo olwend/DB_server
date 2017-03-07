@@ -17,7 +17,15 @@ feature 'server' do
     expect(page).to have_content "Set ="
   end
 
-  scenario 'it responds to a request to give value stored at a key' do
+  scenario 'it stores somekey and somevalue in a hash' do
+    visit('/set?somekey=a&somevalue=1')
+    expect(page.status_code).to eq 200
+    expect(@somehash).to eq({"a"=>"1"})
+  end
 
+  scenario 'it gets the value for a key' do
+    visit('/set?somekey=a&somevalue=1')
+    visit('/get?key=a')
+    expect(page).to have_content(1)
   end
 end

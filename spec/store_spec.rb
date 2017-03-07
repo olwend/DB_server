@@ -6,7 +6,7 @@ describe Datastore do
   let(:v)       { "somevalue" }
 
 
-    it 'responds as empty' do
+    it 'responds as empty new object' do
       datastore = Datastore.new
       expect(datastore.somehash).to be_empty
     end

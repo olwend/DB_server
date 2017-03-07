@@ -1,3 +1,4 @@
+
 class Datastore
 
   attr_reader :somehash
