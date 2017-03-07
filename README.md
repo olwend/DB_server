@@ -10,7 +10,7 @@ My starting point is to understand and breakdown the required request-response c
 
 The user flow through the app is to return a value passed in as a key-value pair with http requests.
 
-1. Server receives a request on ```http://localhost:4000/set?somekey=somevalue```
+1. Server receives a request on http://localhost:4000/set?somekey=somevalue
     ```get``` response will be ```statuscode 200 OK``` confirming /set exists
      ```post  somekey=somevalue``` to ```set```
 2. Store the passed key and value in memory
@@ -29,21 +29,21 @@ Diagram to represent
 
 Choice of Technology
 --------------------
-ruby 2.3.3
-httpie - spike and manual test e.g. check params.
-Sinatra - receive and respond to HTTP requests.
+ruby 2.3.3  
+httpie - spike and manual test e.g. check params.  
+Sinatra - receive and respond to HTTP requests.  
 DataMapper - database would use model 'datastore' as table
 
 Installation
 ------------
-```$ git clone https://github.com/olwend/DB_server
-$ cd DB_server
-$ rvm 2.3.3
-$ bundle
+$ git clone https://github.com/olwend/DB_server     
+$ cd DB_server  
+$ rvm 2.3.3  
+$ bundle  
 $ ruby app.rb
-```
-Go to http://localhost:4000/
-Amend URL string to set key and value http://localhost:4000/set?somekey=asomevalue=1
+
+Go to http://localhost:4000/  
+Amend URL string to set key and value http://localhost:4000/set?somekey=asomevalue=1  
 Return value with http://localhost:4000/get?somekey
 
 Run tests with ```$rspec```
